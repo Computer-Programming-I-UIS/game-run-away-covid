@@ -1,17 +1,19 @@
 class Personaje{
 
-  PImage img;
+  PImage img, img1;
   int y1,x1,y2,x2;
   
   Personaje(){
 
-    img = loadImage("virus.png");
-    y1 = 70; x1 = 20; y2 = height/2; x2 = width/2;
+  img = loadImage("virus.png");
+  img1 = loadImage("humano.gif");
+  y1 = 600; x1 = 295; y2 = 18; x2 = 915;
   }
   
  void movimiento() {
  
-    image(img, x1, y1);
+    image(img, x2, y2, 35, 35);
+    image(img1, x1, y1, 90, 90);
    
     if(y1u) //Dibuja el movimiento hacia arriba de la barra lateral izquierda
     {
