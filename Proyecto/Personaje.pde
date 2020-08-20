@@ -5,8 +5,8 @@ class Personaje{
   
   Personaje(){
 
-  img = loadImage("virus.png");
-  img1 = loadImage("humano.gif");
+  img = loadImage("Virus2.gif");
+  img1 = loadImage("Personaje.gif");
   y1 = 600; x1 = 295; y2 = 18; x2 = 915;
   }
   

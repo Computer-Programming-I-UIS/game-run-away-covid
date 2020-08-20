@@ -7,8 +7,8 @@ Personaje A;
 void setup(){
   
   A = new Personaje();
-  img = loadImage("virus.png");
-  img1 = loadImage("humano.gif");
+  img = loadImage("Virus2.gif");
+  img1 = loadImage("Personaje.gif");
   size(1280, 720);
   textSize(25);
   background(255);
