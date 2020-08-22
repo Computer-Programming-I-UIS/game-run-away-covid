@@ -7,7 +7,7 @@ class Personaje{
 
   img = loadImage("Assets/Virus2.gif");
   img1 = loadImage("Assets/Personaje.gif");
-  y1 = 600; x1 = 295; y2 = 18; x2 = 915;
+  y1 = 600; x1 = 340; y2 = 20; x2 = 920;
   }
   
  void movimiento() {
