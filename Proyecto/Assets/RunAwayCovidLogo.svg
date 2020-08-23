@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="419mm" height="278mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 41900 27800"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="1000" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Fipps">
+		<font-face-src>
+			<font-face-name name="Fipps-Regular"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="A" horiz-adv-x="1000" d="M625 250.001l0 374.5 -374.999 0 0 -374.5 -125.001 0 0 748.999 125.001 0 0 -249.666 374.999 0 0 249.666 125.001 0 0 -748.999 -125.001 0zm-374.999 748.999l0 125 374.999 0 0 -125 -374.999 0zm749.999 0l-125 0 0 125 -125 0 0 125 -500 0 0 -124 -125.001 0 0 -125 -125 0 0 -875 125 0 0 -124 375 0 0 124 125 0 0 -124 375 0 0 998.001z"/>
+   <glyph unicode="N" horiz-adv-x="1000" d="M250 874.333l0 -624.333 -125 0 0 874 125 0 0 -124.834 125 0.832957 0 -125 -125 -0.666366zm125 -124.334l0 125 124.999 0 0 -125 -124.999 0zm249.999 -499.999l0 374.999 -125 0 0 125 125 0 0 375.001 125 0 0 -875 -125 0zm375.001 875l-125 0 0 125 -250 0 0 -125 -249.999 0 0 125 -250 0 0 -125 -125 0 0 -1000 125 0 0 -124.001 374.999 0 0 124.001 125 0 0 -124.001 375.001 0 0 1124z"/>
+   <glyph unicode="R" horiz-adv-x="1000" d="M250 624.999l0 -374.999 -125 0 0 874 499.999 0 0 -125 -374.999 0 0 -249.001 374.999 0 0 -125 -374.999 0zm374.999 -374.999l0 374.999 125 0 0 -374.999 -125 0zm0 499.999l0 250 125 0 0 -250 -125 0zm375.001 -125l-125 0 0 125 125 0 0 250 -125 0 0 124.001 -125 0 0 124.999 -624.999 0 0 -124.999 -125 0 0 -999 125 0 0 -124.001 374.999 0 0 124.001 125 0 0 -124.001 375.001 0 0 624z"/>
+   <glyph unicode="U" horiz-adv-x="1000" d="M250 250l0 124.834 374.999 0 0 -124.834 -374.999 0zm-125 124.834l0 749.167 125 0 0 -749.167 -125 0zm499.999 0l0 749.167 125 0 0 -749 -125 -0.166591zm375.001 749.167l-125 0 0 124.999 -250 0 0 -124.999 -249.999 0 0 124.999 -250 0 0 -124.999 -125 0 0 -874 125 0 0 -124.5 125 0 0 -124.5 624.999 0 0 124.5 125 0 0 998.501z"/>
+   <glyph unicode="W" horiz-adv-x="1250" d="M250.001 250.001l0 125 125 0 0 -125 -125 0zm125 125l0 125 125 0 0 -125 -125 0zm-250.001 0l0 748.999 125.001 0 0 -748.999 -125.001 0zm625.001 -125l0 125 125 0 0 -125 -125 0zm-125.001 125l0 125 125.001 0 0 -125 -125.001 0zm-125 125l0 125 125 0 0 -125 -125 0zm375 -125l0 748.999 125 0 0 -748.999 -125 0zm375 748.999l-125.001 0 0 125 -249.999 0 0 -125 -125 0 0 -373.999 -250.001 0 0 373.999 -125 0 0 125 -250.001 0 0 -125 -125 0 0 -873.999 125 0 0 -124.501 125.001 0 0 -124.501 374.999 0 0 124.501 125.001 0 0 -124.501 374.999 0 0 124.501 125.001 0 0 998.5z"/>
+   <glyph unicode="Y" horiz-adv-x="1250" d="M625 625l0 -374.999 -125 0 0 374.999 -125 0 0 125.001 375 0 0 -125.001 -125.001 0zm-374.999 125.001l0 125 125 0 0 -125 -125 0zm-125.001 125l0 248.999 125.001 0 0 -248.999 -125.001 0zm625.001 -125l0 125 125 0 0 -125 -125 0zm125 125l0 248.999 125 0 0 -248.999 -125 0zm375 248.999l-125.001 0 0 125 -249.999 0 0 -125 -125 0 0 -248.999 -125.001 0 0 124 -125 0 0 125 -125 0 0 125 -250.001 0 0 -125 -125 0 0 -373.999 125 0 0 -125.001 125.001 0 0 -125 125 0 0 -375 125 0 0 -124 375 0 0 499 125 0 0 125 125 0 0 125.001 125.001 0 0 373.999z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Fipps";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:#373435;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil2 {fill:#FEFEFE}
+    .fil0 {fill:#373435}
+    .fil1 {fill:black}
+    .fnt0 {font-weight:normal;font-size:6182.79px;font-family:'Fipps'}
+    .fnt1 {font-weight:normal;font-size:6191.86px;font-family:'Fipps'}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <rect x="15240.21" y="14257.39" width="22718.14" height="10280.05"/>
+    </clipPath>
+    <clipPath id="id1">
+     <path d="M15240.21 24537.44l22718.13 0 0 -10280.04 -22718.13 0 0 10280.04z"/>
+    </clipPath>
+    <clipPath id="id2">
+     <rect x="15240.21" y="14257.39" width="22718.14" height="10280.05"/>
+    </clipPath>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <text x="3157.4" y="10431.46"  class="fil0 fnt0">RUN</text>
+  <text x="5136.36" y="17386.08"  class="fil0 fnt1">AWAY</text>
+  <g id="_1289404727696">
+   <rect class="fil1 str0" transform="matrix(0.729803 -0.15173 0.15173 0.729803 13111.1 17790.1)" width="34554.59" height="11588.75"/>
+   <rect class="fil2" transform="matrix(0.669452 -0.139182 0.116742 0.561515 14356.5 18548.5)" width="34554.59" height="11588.75"/>
+   <g style="clip-path:url(#id0)">
+   </g>
+   <g style="clip-path:url(#id1)">
+    <image id="Logo1.1.png" x="15240.21" y="14257.4" width="22718.13" height="10280.04" xlink:href="RunAwayCovidLogo_Images\RunAwayCovidLogo_ImgID1.png"/>
+   </g>
+   <g style="clip-path:url(#id2)">
+   </g>
+  </g>
+ </g>
+</svg>
