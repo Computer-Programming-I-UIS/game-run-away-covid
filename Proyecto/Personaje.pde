@@ -1,15 +1,27 @@
-class Personaje{
-
-  PImage img, img1;
+class Personaje
+{
+  PImage img, img1, logo;
   int y1,x1,y2,x2;
   
-  Personaje(){
-
-  img = loadImage("Assets/Virus2.gif");
-  img1 = loadImage("Assets/Personaje.gif");
-  y1 = 600; x1 = 340; y2 = 20; x2 = 920;
+  Personaje()
+  {
+    img = loadImage("Assets/Virus2.gif");
+    img1 = loadImage("Assets/Personaje.gif");
+    logo = loadImage("Assets/RunAwayCovid.png"); //Carga el logo del juego
+    y1 = 600; x1 = 340; y2 = 20; x2 = 920;
   }
   
+  void Mainmenu()
+  {
+    fill(255);
+    rect(0, 0, width, height);
+    image(logo, 51, 139, 722, 460);
+    strokeWeight(0);
+    rect(887, 124, 322, 111);
+    rect(887, 312, 322, 111);
+    rect(887, 500, 322, 111);
+  }
+    
  void movimiento() {
  
     image(img, x2, y2, 35, 35);
