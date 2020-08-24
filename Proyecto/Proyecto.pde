@@ -22,8 +22,7 @@ background(255);
 fill(0); 
 text("TIEMPO\n"+time,130,30);
 A.movimiento();
-B.laberinto();
-}
+B.laberinto();;}
   
 void keyPressed()
 {
