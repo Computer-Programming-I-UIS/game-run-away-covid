@@ -1,5 +1,6 @@
 boolean y1u, y1d, x1d, x1i, y2u, y2d, x2d, x2i, start ; 
 PImage img,img1; int y1,x1,x2,y2;
+PShape logo;
 int[][] maze = new int[30][31];
 int n=0,time=60;
 Personaje A;
