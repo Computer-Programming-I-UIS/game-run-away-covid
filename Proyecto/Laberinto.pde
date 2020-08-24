@@ -52,7 +52,7 @@ if(x1==230&&y1==170)
  textSize(44);
  text("GANASTE",20, 175);
  noLoop();
-}// Cuando el jugador llega a la meta se acaba el juego 
+}// Cuando el jugador llega a la meta se acaba el juego y el jugador 1 gana
 else if(time==0)
 {
       background(255);
@@ -60,7 +60,7 @@ else if(time==0)
       textSize(44);
       text("PERDISTE",20,175);
       noLoop();
-}
+}//Cuando el tiempo llegue a 0 se acaba el juego y el jugador 1 pierde
 ///////////////////////////////////////////////////
     //Entrada y salida de los portales
     else if (x1==10&&y1==150){x1 = 60; y1 = 60; }else if (x1==60&&y1==60){x1 = 10; y1 = 150; }
@@ -88,5 +88,7 @@ else if(time==0)
     fill(255,145,0);rect(100,250,10,20); fill(255,145,0);rect(190,290,20,10);//portal 17-18
     fill(91,144,149);rect(110,240,20,10); fill(91,144,149);rect(180,190,20,10);//portal 19-20
     fill(249,255,98);rect(90,140,10,20); fill(249,255,98);rect(240,130,20,10);//portal 19-20
+    
+    
 }
 }
