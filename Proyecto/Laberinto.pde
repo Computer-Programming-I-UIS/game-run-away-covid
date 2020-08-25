@@ -3,16 +3,17 @@ class Laberinto {
   int[][] maze = new int[30][31];
   PImage img2, img3, img4, img, img1;
   int y1,x1,y2,x2;
+  int p1,p2,p3,t1,t2,pj,pc, pmin = 300;
   
 Laberinto()
   
   {
     img = loadImage("Assets/Virus2.gif");
-    img1 = loadImage("Assets/Personaje.gif");
+    img1 = loadImage("Assets/Personaje.png");
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
-    y1 = 260; x1 = -10; y2 = 10; x2 = 270;
+    y1 = 280; x1 = 10; y2 = 10; x2 = 270; pmin = 300;
   }
   
   void laberinto(){ //Matriz que dibuja el laberinto, escalando y trasladando pixeles
@@ -99,10 +100,28 @@ if(x1==230&&y1==170)
     image(img3, 260, 252, 9, 17);
     image(img4, 145, 272, 10, 8);
   }
+  
+    void puntaje() {
+  fill(0);text("PUNTAJE "+pj, -115, 270);
+  fill(0);text("PUNTAJE "+pc, 320, 270);
+  pj = p1+p2+p3;
+  
+  if (x1==30&&y1==190){ p1 = 100; }if (x1==120&&y1==50){ p2 = 100; }
+  if (x1==60&&y1==270){ p3 = 100; }if (x1==140&&y1==270){ t1 = 1500; }
+  if (x1==260&&y1==250){ t2 = 1500; }
+  
+  if (p1==pmin){
+  text("Fin del juego, el jugador de la izquierda ha ganado", 30, 170); 
+    }
+  if (p2==pmin){
+  text("Fin del juego, el covid ha ganado",30, 170); 
+    }
+  }
+  
   void movimiento() {
    
     image(img, x2, y2, 20, 20);
-    image(img1, x1, y1, 60, 60);
+    image(img1, x1, y1, 15, 15);
 
     if(y1u) //Dibuja el movimiento hacia arriba de la barra lateral izquierda
     {

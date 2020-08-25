@@ -25,6 +25,7 @@ scale(2.2);
 translate(150,0);
 B.movimiento();
 B.laberinto();
+B.puntaje();
 C.tiempo();
 }
   
