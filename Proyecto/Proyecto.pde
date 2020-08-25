@@ -1,35 +1,39 @@
 boolean y1u, y1d, x1d, x1i, y2u, y2d, x2d, x2i, start ; 
 PImage img,img1; int y1,x1,x2,y2;
 PShape logo;
-int n=0,time=60;
-Personaje A;
+int n=0; 
+/*Personaje A;*/
 Laberinto B;
+Tiempo C;
 
 void setup(){
   
-  A = new Personaje();
+  /*A = new Personaje();*/
   B = new Laberinto();
+  C = new Tiempo();
   size(1280, 720);
-  textSize(25);
+  textSize(15);
   background(255);
 
 }
 
 void draw () 
 {
-A.Mainmenu();
+/*A.Mainmenu();*/
 background(255);
-fill(0); 
-text("TIEMPO\n"+time,130,30);
-A.movimiento();
-B.laberinto();;}
+scale(2.2);
+translate(150,0);
+B.movimiento();
+B.laberinto();
+C.tiempo();
+}
   
 void keyPressed()
 {
-  A.keymov();
+  B.keymov();
 }
   
 void keyReleased()
 {
-  A.keymov0();
+  B.keymov0();
 }

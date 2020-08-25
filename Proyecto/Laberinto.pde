@@ -1,10 +1,22 @@
 class Laberinto {
  
   int[][] maze = new int[30][31];
+  PImage img2, img3, img4, img, img1;
+  int y1,x1,y2,x2;
+  
+Laberinto()
+  
+  {
+    img = loadImage("Assets/Virus2.gif");
+    img1 = loadImage("Assets/Personaje.gif");
+    img2 = loadImage("Assets/GelPixel.png");
+    img3 = loadImage("Assets/HourGlassPixel.png");
+    img4 = loadImage("Assets/MaskPixel.png");
+    y1 = 260; x1 = -10; y2 = 10; x2 = 270;
+  }
   
   void laberinto(){ //Matriz que dibuja el laberinto, escalando y trasladando pixeles
-    scale(2.2);
-    translate(150,0);
+    
      maze[0][0]=1; maze[0][1]=1;  maze[0][2]=1;  maze[0][3]=1;  maze[0][4]=1;  maze[0][5]=1;  maze[0][6]=1;  maze[0][7]=1;  maze[0][8]=1;  maze[0][9]=1;  maze[0][10]=1;  maze[0][11]=1;  maze[0][12]=1;  maze[0][13]=1;  maze[0][14]=1;  maze[0][15]=1;  maze[0][16]=1;  maze[0][17]=1;  maze[0][18]=1;  maze[0][19]=1;  maze[0][20]=1;  maze[0][21]=1;  maze[0][22]=1;  maze[0][23]=1;  maze[0][24]=1;  maze[0][25]=1;  maze[0][26]=1;  maze[0][27]=1;  maze[0][28]=1;  maze[0][29]=1;  maze[0][30]=1;
      maze[1][0]=1; maze[1][1]=0;  maze[1][2]=0;  maze[1][3]=0;  maze[1][4]=0;  maze[1][5]=0;  maze[1][6]=0;  maze[1][7]=0;  maze[1][8]=0;  maze[1][9]=0;  maze[1][10]=0;  maze[1][11]=0;  maze[1][12]=0;  maze[1][13]=0;  maze[1][14]=1;  maze[1][15]=0;  maze[1][16]=0;  maze[1][17]=0;  maze[1][18]=0;  maze[1][19]=0;  maze[1][20]=0;  maze[1][21]=1;  maze[1][22]=0;  maze[1][23]=0;  maze[1][24]=0;  maze[1][25]=0;  maze[1][26]=0;  maze[1][27]=0;  maze[1][28]=0;  maze[1][29]=0;  maze[1][30]=1;
      maze[2][0]=1; maze[2][1]=0;  maze[2][2]=0;  maze[2][3]=0;  maze[2][4]=0;  maze[2][5]=0;  maze[2][6]=0;  maze[2][7]=0;  maze[2][8]=0;  maze[2][9]=0;  maze[2][10]=0;  maze[2][11]=0;  maze[2][12]=0;  maze[2][13]=0;  maze[2][14]=1;  maze[2][15]=0;  maze[2][16]=0;  maze[2][17]=0;  maze[2][18]=0;  maze[2][19]=0;  maze[2][20]=0;  maze[2][21]=1;  maze[2][22]=0;  maze[2][23]=0;  maze[2][24]=0;  maze[2][25]=0;  maze[2][26]=0;  maze[2][27]=0;  maze[2][28]=0;  maze[2][29]=0;  maze[2][30]=1;
@@ -53,15 +65,7 @@ if(x1==230&&y1==170)
  text("GANASTE",20, 175);
  noLoop();
 }// Cuando el jugador llega a la meta se acaba el juego y el jugador 1 gana
-else if(time==0)
-{
-      background(255);
-      fill(0);
-      textSize(44);
-      text("PERDISTE",20,175);
-      noLoop();
-}//Cuando el tiempo llegue a 0 se acaba el juego y el jugador 1 pierde
-///////////////////////////////////////////////////
+
     //Entrada y salida de los portales
     else if (x1==10&&y1==150){x1 = 60; y1 = 60; }else if (x1==60&&y1==60){x1 = 10; y1 = 150; }
     else if (x1==10&&y1==10){x1 = 250; y1 = 10; }else if (x1==250&&y1==10){x1 = 10; y1 = 10; }
@@ -88,7 +92,121 @@ else if(time==0)
     fill(255,145,0);rect(100,250,10,20); fill(255,145,0);rect(190,290,20,10);//portal 17-18
     fill(91,144,149);rect(110,240,20,10); fill(91,144,149);rect(180,190,20,10);//portal 19-20
     fill(249,255,98);rect(90,140,10,20); fill(249,255,98);rect(240,130,20,10);//portal 19-20
-    
-    
+   
+    image(img2, 30, 192, 10, 16);
+    image(img3, 120, 52, 9, 17);
+    image(img4, 65, 272, 10, 8);
+    image(img3, 260, 252, 9, 17);
+    image(img4, 145, 272, 10, 8);
+  }
+  void movimiento() {
+   
+    image(img, x2, y2, 20, 20);
+    image(img1, x1, y1, 60, 60);
+
+    if(y1u) //Dibuja el movimiento hacia arriba de la barra lateral izquierda
+    {
+     y1 -= 2; 
+    }
+    if(y1d) //Dibuja el movimiento hacia abajo de la barra lateral izquierda
+    {
+     y1 += 2; 
+    }
+    if(y2u)  //Dibuja el movimiento hacia arriba de la barra lateral derecha
+    {
+     y2 -= 2; 
+    }
+    if(y2d) //Dibuja el movimiento hacia abajo de la barra lateral derecha
+    {
+     y2 += 2; 
+    }
+    if(x1i) //Dibuja el movimiento hacia arriba de la barra lateral izquierda
+    {
+     x1 -= 2; 
+    }
+    if(x1d) //Dibuja el movimiento hacia abajo de la barra lateral izquierda
+    {
+     x1 += 2; 
+    }
+    if(x2i)  //Dibuja el movimiento hacia arriba de la barra lateral derecha
+    {
+     x2 -= 2; 
+    }
+    if(x2d) //Dibuja el movimiento hacia abajo de la barra lateral derecha
+    {
+     x2 += 2; 
+    }
 }
+  void keymov()
+  {
+    if(key == 'w' || key == 'W') //Define si la tecla de control está siendo presionada
+    {
+      y1u = true;
+    }
+    if(key == 's' || key == 'S') //Define si la tecla de control está siendo presionada
+    {
+      y1d = true;
+    }
+    if(keyCode == UP) //Define si la tecla de control está siendo presionada
+    {
+      y2u = true;
+    }
+    if(keyCode == DOWN) //Define si la tecla de control está siendo presionada
+    {
+      y2d = true;
+    }
+     if(key == 'd' || key == 'D') //Define si la tecla de control está siendo presionada
+    {
+      x1d = true;
+    }
+    if(key == 'a' || key == 'A') //Define si la tecla de control está siendo presionada
+    {
+      x1i= true;
+    }
+    if(keyCode == LEFT) //Define si la tecla de control está siendo presionada
+    {
+      x2i = true;
+    }
+    if(keyCode == RIGHT) //Define si la tecla de control está siendo presionada
+    {
+      x2d = true;
+    }
+  }
+  
+  void keymov0(){
+    
+ if(key == 'w' || key == 'W') //Define si la tecla de control está siendo presionada
+    {
+      y1u = false;
+    }
+    if(key == 's' || key == 'S') //Define si la tecla de control está siendo presionada
+    {
+      y1d = false;
+    }
+    if(keyCode == UP) //Define si la tecla de control está siendo presionada
+    {
+      y2u = false;
+    }
+    if(keyCode == DOWN) //Define si la tecla de control está siendo presionada
+    {
+      y2d = false;
+    }
+     if(key == 'd' || key == 'D') //Define si la tecla de control está siendo presionada
+    {
+      x1d = false;
+    }
+    if(key == 'a' || key == 'A') //Define si la tecla de control está siendo presionada
+    {
+      x1i= false;
+    }
+    if(keyCode == LEFT) //Define si la tecla de control está siendo presionada
+    {
+      x2i = false;
+    }
+    if(keyCode == RIGHT) //Define si la tecla de control está siendo presionada
+    {
+      x2d = false;
+      }
+    }
+  
 }
