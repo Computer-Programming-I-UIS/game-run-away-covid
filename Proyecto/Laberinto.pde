@@ -8,7 +8,7 @@ Laberinto()
   
   {
     img = loadImage("Assets/Virus2.gif");
-    img1 = loadImage("Assets/Personaje.gif");
+    img1 = loadImage("Assets/Personaje.png");
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
