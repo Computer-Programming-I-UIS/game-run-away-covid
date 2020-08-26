@@ -17,7 +17,7 @@ void setup(){
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
-    textSize(32);
+    textSize(25);
 }
 
 void draw(){ //se llaman a las funciones de las clases
@@ -36,10 +36,10 @@ void draw(){ //se llaman a las funciones de las clases
     fill(255,0,0);
    
    //Para que el humano gane debe llegar a la meta con 300 puntos, es decir debe coger los items
-   if((xpos==230&&ypos==170)&&(pj==pmin)){
+   if((xpos==230&&ypos==170)&&(pj>=pmin)){
       background(255);
       fill(0);
-      text("EL HUMANO HA GANADO",-120, 175);
+      text("EL HUMANO HA GANADO",-60, 175);
       noLoop();
     }
     //Entrada y salida de los personajes por los portales
@@ -71,16 +71,16 @@ void draw(){ //se llaman a las funciones de las clases
   
   void puntaje() {
   fill(0);text("PUNTAJE "+pj, -115, 270);
-  fill(0);text("PUNTAJE "+pc, 320, 270);
+  fill(0);text("PUNTAJE "+pc, 315, 270);
   pj = p1+p2+p3;
   
   /*Dependiendo de que jugador alcanza los items, estos se transportan al lado
   correspondiente de la pantalla, sumando asi a los puntajes*/
   if (xpos==x1&&ypos==y1-2){ p1=100; x1=-115; y1=290; }
-  if (xpos==x2&&ypos==y2-2){ p2=100; x2=-100; y2=290; }
+  if (xpos==x2&&ypos==y2-2){ t2=1500; x2=-100; y2=290; }
   if (xpos==x3-5&&ypos==y3-2){ p3 = 100; x3=-85; y3=290; }
-  if (xpos==x4&&ypos==y4-2){ t2 = 1500; x4=-55; y4=290; }
-  if (xpos==x5-2&&ypos==y5-2){ t1 = 1500; x5=-70; y5=290; }
+  if (xpos==x4&&ypos==y4-2){ t1 = 1500; x4=-55; y4=290; }
+  if (xpos==x5-5&&ypos==y5-2){ p2 = 100; x5=-70; y5=290; }
   
   if (x2pos==x1&&y2pos==y1-2){x1=320; y1=290; }
   if (x2pos==x2&&y2pos==y2-2){x2=335; y2=290; }

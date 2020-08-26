@@ -6,6 +6,7 @@ class Snake{
     y2pos=constrain(y2pos, 0, height-scl);
   }
   void show(){
+    textSize(10);
     fill(93,83,93);rect(xpos,ypos,10,10);//personaje1
     fill(255,165,165);rect(x2pos,y2pos,10,10);//personaje2
     fill(0,255,0);rect(230,170,20,10);//meta
@@ -24,7 +25,7 @@ class Snake{
     image(img2, x1, y1, 10, 16);//item de gel antibacterial
     image(img3, x2, y2, 9, 17);//item de reloj de arena
     image(img4, x3, y3, 10, 8);//item de tapaboca
-    image(img3, x4, y4, 9, 17);//item de tapaboca
-    image(img4, x5, y5, 10, 8);//item de reloj de arena
+    image(img3, x4, y4, 9, 17);//item de reloj de arena
+    image(img4, x5, y5, 10, 8);//item de tapaboca
   }
 }
