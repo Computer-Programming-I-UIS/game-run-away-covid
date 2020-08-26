@@ -1,18 +1,18 @@
-boolean y1u, y1d, x1d, x1i, y2u, y2d, x2d, x2i, start ; 
+boolean y1u, y1d, x1d, x1i, y2u, y2d, x2d, x2i, start = false, init = true, crets = false; 
 PImage img,img1; int y1,x1,x2,y2;
 PShape logo;
 int n=0; 
-Personaje A;
+Menu A;
 Laberinto B;
 Tiempo C;
 
 void setup(){
   
-  A = new Personaje();
+  A = new Menu();
   B = new Laberinto();
   C = new Tiempo();
   size(1280, 720);
-  textSize(15);
+  textSize(32);
   background(255);
 
 }
