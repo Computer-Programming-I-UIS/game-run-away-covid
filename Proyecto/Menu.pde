@@ -72,7 +72,6 @@ class Menu
         }
       }
       image(logo, (width/2)-142, 68, 284, 180);
-      fill(0);
       text("Cristian Camilo Alvarino Castro", (width/2)-409, (height/2)-30);
       text("Andrés David Baena Atencio", (width/2)-368, (height/2)+20);
       image(logo2, (width/2)-75, (height/2)+70, 150, 225);
