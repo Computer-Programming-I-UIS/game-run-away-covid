@@ -1,103 +1,50 @@
 //declaracion de variables globales y clases
-Snake snake = new Snake();
 boolean start = false, init = true, crets = false;
-int xpos=10,ypos=290,x2pos=280,y2pos=10,scl=10,n=0,s=6000,vista=0;
+int xpos=10,ypos=280,x2pos=280,y2pos=10,scl=10,n=0;
 int[][] maze= new int[30][31];
 PImage img2, img3, img4, img, img1;
-int p1,p2,p3,t1,t2,pj,pc, pmin = 200;
+int p1,p2,p3,p4,p5,p6,pj,pc, pmin = 200;
 int x1,x2,x3,x4,x5,y1,y2,y3,y4,y5;
 Menu A;
+Puntaje B;
 Tiempo C;
+Interfaz D;
 
-void setup(){
-  size(1280, 720);
+    void setup(){ //se definen los objetos y se da valor inicial a las variables
+  
+    size(1280, 720);
     A = new Menu();
-    C= new Tiempo();
+    B = new Puntaje();
+    C = new Tiempo();
+    D = new Interfaz();
     x1=30; x2=120; x3=65; x4=260; x5=145; y1=192; y2=52; y3=272; y4=252; y5=272;
+    img = loadImage("Assets/Personaje.png");
+    img1 = loadImage("Assets/Virus2.gif");
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
     textSize(25);
-}
+    }
 
-void draw(){ //se llaman a las funciones de las clases
+  void draw(){ //se llaman a las funciones de las clases
+  
   background(255);
   A.Mainmenu();
   scale(2.2);
   translate(150,0);
-    if(start)
-    {
-      Maze();
-      snake.update();
-      snake.show();
-      C.tiempo();
-      puntaje();
-    }
+    
+  if(start) {
+      
+    Maze();
+    D.update();
+    D.show();
+    C.tiempo();
+    B.puntaje();
+    }  
     fill(255,0,0);
-   
-   //Para que el humano gane debe llegar a la meta con 300 puntos, es decir debe coger los items
-   if((xpos==230&&ypos==170)&&(pj>=pmin)){
-      background(255);
-      fill(0);
-      text("EL HUMANO HA GANADO",-60, 175);
-      noLoop();
     }
-    //Entrada y salida de los personajes por los portales
-    else if (xpos==10&&ypos==150){xpos = 60; ypos = 60; }else if (xpos==60&&ypos==60){xpos = 10; ypos = 150; }
-    else if (xpos==10&&ypos==10){xpos = 250; ypos = 10; }else if (xpos==250&&ypos==10){xpos = 10; ypos = 10; }
-    else if (xpos==30&&ypos==60){xpos = 220; ypos = 280; }else if (xpos==220&&ypos==280){xpos = 30; ypos = 60; }
-    else if (xpos==80&&ypos==120){xpos = 110; ypos = 10; }else if (xpos==110&&ypos==10){xpos = 80; ypos = 120; }
-    else if (xpos==110&&ypos==100){xpos = 90; ypos = 280; }else if (xpos==90&&ypos==280){xpos = 110; ypos = 100; }
-    else if (xpos==40&&ypos==280){xpos = 210; ypos = 40; }else if (xpos==210&&ypos==40){xpos = 40; ypos = 280; }
-    else if (xpos==190&&ypos==50){xpos = 170; ypos = 280; }else if (xpos==170&&ypos==280){xpos = 190; ypos = 50; }
-    else if (xpos==170&&ypos==250){xpos = 200; ypos = 210; }else if (xpos==200&&ypos==210){xpos = 170; ypos = 250; }
-    else if (xpos==90&&ypos==140){xpos = 240; ypos = 130; }else if (xpos==240&&ypos==130){xpos = 90; ypos = 140; }
-    else if (xpos==100&&ypos==250){xpos = 190; ypos = 290; }else if (xpos==190&&ypos==290){xpos = 100; ypos = 250; }
-    else if (xpos==110&&ypos==240){xpos = 180; ypos = 190; }else if (xpos==180&&ypos==190){xpos = 110; ypos = 240; }
-    
-    else if (x2pos==10&&y2pos==150){x2pos = 60; y2pos = 60; }else if (x2pos==60&&y2pos==60){x2pos = 10; y2pos = 150; }
-    else if (x2pos==10&&y2pos==10){x2pos = 250; y2pos = 10; }else if (x2pos==250&&y2pos==10){x2pos = 10; y2pos = 10; }
-    else if (x2pos==30&&y2pos==60){x2pos = 220; y2pos = 280; }else if (x2pos==220&&y2pos==280){x2pos = 30; y2pos = 60; }
-    else if (x2pos==80&&y2pos==120){x2pos = 110; y2pos = 10; }else if (x2pos==110&&y2pos==10){x2pos = 80; y2pos = 120; }
-    else if (x2pos==110&&y2pos==100){x2pos = 90; y2pos = 280; }else if (x2pos==90&&y2pos==280){x2pos = 110; y2pos = 100; }
-    else if (x2pos==40&&y2pos==280){x2pos = 210; y2pos = 40; }else if (x2pos==210&&y2pos==40){x2pos = 40; y2pos = 280; }
-    else if (x2pos==190&&y2pos==50){x2pos = 170; y2pos = 280; }else if (x2pos==170&&y2pos==280){x2pos = 190; y2pos = 50; }
-    else if (x2pos==170&&y2pos==250){x2pos = 200; y2pos = 210; }else if (x2pos==200&&y2pos==210){x2pos = 170; y2pos = 250; }
-    else if (x2pos==90&&y2pos==140){x2pos = 240; y2pos = 130; }else if (x2pos==240&&y2pos==130){x2pos = 90; y2pos = 140; }
-    else if (x2pos==100&&y2pos==250){x2pos = 190; y2pos = 290; }else if (x2pos==190&&y2pos==290){x2pos = 100; y2pos = 250; }
-    else if (x2pos==110&&y2pos==240){x2pos = 180; y2pos = 190; }else if (x2pos==180&&y2pos==190){x2pos = 110; y2pos = 240; }
-    
-  }
   
-  void puntaje() {
-  fill(0);text("PUNTAJE "+pj, -115, 270);
-  fill(0);text("PUNTAJE "+pc, 315, 270);
-  pj = p1+p2+p3;
-  
-  /*Dependiendo de que jugador alcanza los items, estos se transportan al lado
-  correspondiente de la pantalla, sumando asi a los puntajes*/
-  if (xpos==x1&&ypos==y1-2){ p1=100; x1=-115; y1=290; }
-  if (xpos==x2&&ypos==y2-2){ t2=1500; x2=-100; y2=290; }
-  if (xpos==x3-5&&ypos==y3-2){ p3 = 100; x3=-85; y3=290; }
-  if (xpos==x4&&ypos==y4-2){ t1 = 1500; x4=-55; y4=290; }
-  if (xpos==x5-5&&ypos==y5-2){ p2 = 100; x5=-70; y5=290; }
-  
-  if (x2pos==x1&&y2pos==y1-2){x1=320; y1=290; }
-  if (x2pos==x2&&y2pos==y2-2){x2=335; y2=290; }
-  if (x2pos==x3-5&&y2pos==y3-2){x3=350; y3=290; }
-  if (x2pos==x4&&y2pos==y4-2){ t2 = 1500; x4=390; y4=290; }
-  if (x2pos==x5-5&&y2pos==y5-2){ t1 = 1500; x5=375; y5=290; }
-  
- //Si el covid toca al humano el juego se acaba, ganando asi el covid
-  if (xpos==x2pos && ypos==y2pos){
-    background(255);
-    pc = pmin;
-    text("EL COVID TE HA MATADO",50, 150);
-    text("GAME OVER",100, 170);
-    }
-  }
-
-void Maze(){ //Matriz que dibuja el laberinto
+   void Maze(){ //Matriz que dibuja el laberinto, los 0 son espacios vacios y los 1 se rellenan de cuadros negros
  
    maze[0][0]=1; maze[0][1]=1;  maze[0][2]=1;  maze[0][3]=1;  maze[0][4]=1;  maze[0][5]=1;  maze[0][6]=1;  maze[0][7]=1;  maze[0][8]=1;  maze[0][9]=1;  maze[0][10]=1;  maze[0][11]=1;  maze[0][12]=1;  maze[0][13]=1;  maze[0][14]=1;  maze[0][15]=1;  maze[0][16]=1;  maze[0][17]=1;  maze[0][18]=1;  maze[0][19]=1;  maze[0][20]=1;  maze[0][21]=1;  maze[0][22]=1;  maze[0][23]=1;  maze[0][24]=1;  maze[0][25]=1;  maze[0][26]=1;  maze[0][27]=1;  maze[0][28]=1;  maze[0][29]=1;  maze[0][30]=1;
    maze[1][0]=1; maze[1][1]=0;  maze[1][2]=0;  maze[1][3]=0;  maze[1][4]=0;  maze[1][5]=0;  maze[1][6]=0;  maze[1][7]=0;  maze[1][8]=0;  maze[1][9]=0;  maze[1][10]=0;  maze[1][11]=0;  maze[1][12]=0;  maze[1][13]=0;  maze[1][14]=1;  maze[1][15]=0;  maze[1][16]=0;  maze[1][17]=0;  maze[1][18]=0;  maze[1][19]=0;  maze[1][20]=0;  maze[1][21]=1;  maze[1][22]=0;  maze[1][23]=0;  maze[1][24]=0;  maze[1][25]=0;  maze[1][26]=0;  maze[1][27]=0;  maze[1][28]=0;  maze[1][29]=0;  maze[1][30]=1;
@@ -140,41 +87,43 @@ void Maze(){ //Matriz que dibuja el laberinto
   }
 }
 
-void keyPressed(){ //Movimiento de los personajes
-  if(n==0){
-    if(key == 'w'||key == 'W'){
-      if(maze[xpos/10][(ypos-10)/10]!=1){
+  void keyPressed(){ //Movimiento de los personajes y deteccion de las paredes
+    
+    if(n==0){
+      if(key == 'w'||key == 'W'){
+        if(maze[xpos/10][(ypos-10)/10]!=1){
         xpos+=0; ypos+=-10;
-      }
-    }else if (key == 's'||key == 'S'){
-      if(maze[xpos/10][(ypos+10)/10]!=1){    
+        }
+      }else if (key == 's'||key == 'S'){
+        if(maze[xpos/10][(ypos+20)/10]!=1){    
         xpos+=0; ypos+=10; 
-      }
-    }else if (key == 'd'||key == 'D'){
-      if(maze[(xpos+10)/10][ypos/10]!=1){    
+        }
+      }else if (key == 'd'||key == 'D'){
+        if((maze[(xpos+10)/10][(ypos+10)/10]!=1)&&(maze[(xpos+10)/10][(ypos)/10]!=1)){    
         xpos+=10; ypos+=0;
-      }
-    }else if (key == 'a'||key == 'A'){
-      if(maze[(xpos-10)/10][ypos/10]!=1){
+        }
+      }else if (key == 'a'||key == 'A'){
+        if((maze[(xpos-10)/10][(ypos+10)/10]!=1)&&(maze[(xpos-10)/10][(ypos)/10]!=1)){
         xpos+=-10; ypos+=0;
+        }
       }
-    }
-    if(keyCode == UP){
-      if(maze[x2pos/10][(y2pos-10)/10]!=1){
+      
+      if(keyCode == UP){
+        if(maze[x2pos/10][(y2pos-10)/10]!=1){
         x2pos+=0; y2pos+=-10;
-      }
+        }
     }else if (keyCode == DOWN){
-      if(maze[x2pos/10][(y2pos+10)/10]!=1){    
+      if(maze[x2pos/10][(y2pos+20)/10]!=1){    
         x2pos+=0; y2pos+=10; 
       }
     }else if (keyCode == RIGHT){
-      if(maze[(x2pos+10)/10][y2pos/10]!=1){    
+      if((maze[(x2pos+10)/10][(y2pos+10)/10]!=1)&&(maze[(x2pos+10)/10][(y2pos)/10]!=1)){    
         x2pos+=10; y2pos+=0;
       }
     }else if (keyCode == LEFT){
-      if(maze[(x2pos-10)/10][y2pos/10]!=1){
+      if((maze[(x2pos-10)/10][(y2pos+10)/10]!=1)&&(maze[(x2pos-10)/10][(y2pos)/10]!=1)){
         x2pos+=-10; y2pos+=0;
-        }
+       }
       }
     }
   }
