@@ -23,7 +23,7 @@ class Puntaje{
     background(255);
     pc = pmin;
     text("EL COVID TE HA MATADO",50, 150);
-    text("GAME OVER",100, 170);
+    text("PERDISTE",100, 170);
     }
     
   //Para que el humano gane debe llegar a la meta con 200 puntos, es decir debe coger los items

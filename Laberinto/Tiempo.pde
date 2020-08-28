@@ -16,7 +16,7 @@ class Tiempo {
    background(0);
    fill(255);
    clear();
-   text("EL HUMANO HA SIDO ENCERRADO CON EL COVID",-50,170);
+   text("EL HUMANO HA QUEDADO ATRAPADO CON EL COVID",-50,170);
    noLoop();
    }//Cuando el tiempo llegue a 0 se acaba el juego y el jugador 1 pierde
     
