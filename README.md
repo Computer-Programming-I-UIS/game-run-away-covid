@@ -1,4 +1,4 @@
-# Proyecto final (Run Away Covid)
+# Run Away Covid
 
 ## Autores 
 
