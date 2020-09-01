@@ -1,4 +1,4 @@
-# Run Away Covid
+﻿# Run Away Covid
 
 ## Autores 
 
@@ -18,6 +18,6 @@ Este es un juego de laberintos en el cual tendrás que escapar del COVID, pero a
 
 Características:
 
-*Items que dan puntos al ser "atrapados.
+*Items que dan puntos al ser "atrapados".
 
 *Portales que transportaran a los jugadores a través del mapa.
