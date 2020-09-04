@@ -16,7 +16,7 @@ Este es un juego de laberintos en el cual tendrás que escapar del COVID, pero a
 ![IMG2](https://232czq.bn.files.1drv.com/y4misf_iXoVSElbeA-0yFGzcEyAHMgL3kBNac6Efs8h38RWLeMD2V85n-zworTRDnH905OqJraEwiVzKWG3Xr6tM5lmy2lLvyKCFJRrMW3s4_mEooHKGtwztrvt4xIwmjbUUMaSWqOQ-JrfaJsb9xZvEBSHh6gYJLekU9bReJMHfpie33Z9T5vzsKMGPi47VyEnwLflmJ_TVESuqrM8_2lZSQ?width=660&height=389&cropmode=none)
 ![IMG3](https://2x2czq.bn.files.1drv.com/y4mPMDZbMw1t9jVQlhcfx_aY1sV0WVgE2po26ygtoyzkebuXrV-pWW_SsXbEp0G1oTuXw7wl51GsReHy-2M9VRH9s8FVmy5agMURJbgorYTeozVjGwTPw2I99Qsz8sPDyuYhCXHHFj7qvZJ1IfHBwTyu03jGycIvIk5t1uuAmr0prQn4nSkUd7hMXSp4T2ULi2EO5jW-KGDS0yNnk9JcDpzTw?width=660&height=388&cropmode=none)
 
-Características:
+## Características
 
 *Items que dan puntos al ser "atrapados".
 
