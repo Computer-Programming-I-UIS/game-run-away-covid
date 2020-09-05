@@ -1,5 +1,5 @@
 //declaracion de variables globales y clases
-boolean start = false, init = true, credits = false, tutorial = false;
+boolean start = false, init = true;
 int xpos=10,ypos=280,x2pos=280,y2pos=10,scl=10,n=0;
 int[][] maze= new int[30][31];
 PImage img2, img3, img4, img, img1;
