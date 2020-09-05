@@ -4,8 +4,8 @@ class Puntaje{
     
   fill(0);text("PUNTAJE "+pj, -115, 270);
   fill(0);text("PUNTAJE "+pc, 315, 270);
-  pj = p1+p2+p3; //puntos jugador del humano
-  pc = p4+p5+p6; //puntos jugador del covid
+  pj = p1+p2+p3; //Puntos jugador del humano
+  pc = p4+p5+p6; //Puntos jugador del covid
   
   /*Dependiendo de que jugador alcanza los items, estos se transportan al lado
   correspondiente de la pantalla, sumando asi a los puntajes*/

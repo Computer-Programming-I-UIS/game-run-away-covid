@@ -1,5 +1,5 @@
 //declaracion de variables globales y clases
-boolean start = false, init = true, crets = false;
+boolean start = false, init = true, credits = false, tutorial = false;
 int xpos=10,ypos=280,x2pos=280,y2pos=10,scl=10,n=0;
 int[][] maze= new int[30][31];
 PImage img2, img3, img4, img, img1;
@@ -10,7 +10,7 @@ Puntaje B;
 Tiempo C;
 Interfaz D;
 
-    void setup(){ //se definen los objetos y se da valor inicial a las variables
+    void setup(){ //Se definen los objetos y se da valor inicial a las variables
   
     size(1280, 720);
     A = new Menu();
@@ -23,10 +23,10 @@ Interfaz D;
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
-    textSize(25);
+    textSize(32);
     }
 
-  void draw(){ //se llaman a las funciones de las clases
+  void draw(){ //Se llaman a las funciones de las clases
   
   background(255);
   A.Mainmenu();
