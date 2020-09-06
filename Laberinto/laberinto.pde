@@ -5,7 +5,7 @@ AudioPlayer sound;
 boolean start = false, init = true;
 int xpos=10,ypos=280,x2pos=280,y2pos=10,scl=10,n=0;
 int[][] maze= new int[30][31];
-PImage img2, img3, img4, img, img1;
+PImage img2, img3, img4, img, img1, img5;
 int p1,p2,p3,p4,p5,p6,pj,pc, pmin = 200;
 int x1,x2,x3,x4,x5,y1,y2,y3,y4,y5;
 Menu A;
@@ -26,14 +26,11 @@ Interfaz D;
     img2 = loadImage("Assets/GelPixel.png");
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
-<<<<<<< Updated upstream
     img5 = loadImage("Assets/meta.jpg");
     textSize(25);
-=======
     minim = new Minim(this);
-    sound=minim.loadFile("SupButtonSound.mp3");
+    sound = minim.loadFile("SupButtonSound.mp3");
     textSize(32);
->>>>>>> Stashed changes
     }
 
   void draw(){ //Se llaman a las funciones de las clases

@@ -6,8 +6,8 @@ class Tiempo {
  
   if (s <= 6000 && s>0){
     
-  fill (0); text ("TIEMPO", -120, 30);
-  text ("0:"+s, -119, 50);
+  fill (0); text ("TIEMPO", 320, 30);
+  text ("0:"+s, 320, 50);
   s = s - 2;
   }//Temporizador de un minuto que va descontando cada segundo
   
