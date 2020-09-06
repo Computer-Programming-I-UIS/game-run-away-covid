@@ -154,7 +154,7 @@ class Menu
       {
         fill(0);
         textSize(48);
-        text("INSTRUCCIONES DE JUEGO", 149.61, 122.5);
+        text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
         textSize(24);
         text("2/2", 1168.98, 710);
         image(leftA, 1138.61, 676.06, 20.37, 33.94);
