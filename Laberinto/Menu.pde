@@ -1,9 +1,9 @@
 class Menu 
 {
   //Se declaran las variables para las imágenes y la fuente tipográfica
-  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV;
+  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA;
   PFont font;
-  boolean credits = false, tutorial = false, controls = false;
+  boolean credits = false, tutorial = false, controls = false, instructions = false;
   
   Menu() 
    {
@@ -15,6 +15,8 @@ class Menu
     close = loadImage("Assets/Close.png");
     ctrlH = loadImage("Assets/HumanCtrl.png");
     ctrlV = loadImage("Assets/VirusCtrl.png");
+    rightA = loadImage("Assets/RightArrow.png");
+    leftA = loadImage("Assets/LeftArrow.png");
     font = createFont("Assets/Fipps-Regular.otf", 32);
     textFont(font);
    }
@@ -108,10 +110,8 @@ class Menu
     {
       //Muestra la interfaz del tutorial
       image(close, 10, 10, 50, 50);
-      image(logo2, width-1270, 624, 134.87 , 86); 
-      strokeWeight(5);
+      image(logo2, width-1270, 624, 134.87 , 86);
       strokeCap(RECT);
-      line(640, 227.43, 640, 620.07);
       if(mouseX > 10 && mouseX < 60 && mouseY > 10 && mouseY < 60)
       {
         strokeWeight(0);
@@ -121,11 +121,15 @@ class Menu
         {
           tutorial = false;
           init = true;
+          controls = false;
+          instructions = false;
         }
       }
       if(controls)
       {
-        fill(0);
+        fill(0); 
+        strokeWeight(5);
+        line(640, 227.43, 640, 620.07);
         textSize(48);
         text("CONTROLES", 443.13, 122.5);
         textSize(36);
@@ -133,6 +137,35 @@ class Menu
         text("VIRUS", 882.78, 271.19); 
         image(ctrlH, 52.54, 322.07, 534.17, 276.77);    
         image(ctrlV, 692.57, 322.07, 534.17, 276.77);
+        textSize(24);
+        text("1", 1173.72, 710); 
+        text("/2", 1193.98, 710); 
+        image(rightA, 1250.85, 676.06, 20.37, 33.94);
+        if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
+        {
+          if(mousePressed)
+          {
+            controls = false;
+            instructions = true;
+          }
+        }
+      }
+      if(instructions)
+      {
+        fill(0);
+        textSize(48);
+        text("INSTRUCCIONES DE JUEGO", 149.61, 122.5);
+        textSize(24);
+        text("2/2", 1168.98, 710);
+        image(leftA, 1138.61, 676.06, 20.37, 33.94);
+        if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
+        {
+          if(mousePressed)
+          {
+            controls = true;
+            instructions = false;
+          }
+        }
       }
     }
   }
