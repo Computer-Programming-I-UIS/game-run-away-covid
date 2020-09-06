@@ -3,7 +3,7 @@ class Menu
   //Se declaran las variables para las imágenes y la fuente tipográfica
   PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA;
   PFont font;
-  boolean credits = false, tutorial = false, controls = false, instructions = false;
+  boolean credits = false, tutorial = false, controls = false, instructions = false, instructions2 = false;
   
   Menu() 
    {
@@ -139,7 +139,7 @@ class Menu
         image(ctrlV, 692.57, 322.07, 534.17, 276.77);
         textSize(24);
         text("1", 1173.72, 710); 
-        text("/2", 1193.98, 710); 
+        text("/3", 1193.98, 710); 
         image(rightA, 1250.85, 676.06, 20.37, 33.94);
         if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
         {
@@ -156,14 +156,40 @@ class Menu
         textSize(48);
         text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
         textSize(24);
-        text("2/2", 1168.98, 710);
+        text("2/3", 1168.98, 710);
         image(leftA, 1138.61, 676.06, 20.37, 33.94);
+        image(rightA, 1250.85, 676.06, 20.37, 33.94);
         if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
         {
           if(mousePressed)
           {
             controls = true;
             instructions = false;
+          }
+        }
+        if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
+        {
+          if(mousePressed)
+          {
+            instructions = false;
+            instructions2 = true;
+          }
+        }
+      }
+      if(instructions2)
+      {
+        fill(0);
+        textSize(48);
+        text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
+        textSize(24);
+        text("3/3", 1168.98, 710);
+        image(leftA, 1138.61, 676.06, 20.37, 33.94);
+        if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
+        {
+          if(mousePressed)
+          {
+            instructions = true;
+            instructions2 = false;
           }
         }
       }
