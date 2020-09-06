@@ -21,3 +21,7 @@ Este es un juego de laberintos en el cual tendrás que escapar del COVID, pero a
 *Items que dan puntos al ser "atrapados".
 
 *Portales que transportaran a los jugadores a través del mapa.
+
+*Relojes de arena para aumentar o disminuir el tiempo.
+
+*Tutorial y guia basica del juego.
