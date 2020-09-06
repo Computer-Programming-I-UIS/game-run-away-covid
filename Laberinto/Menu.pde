@@ -1,7 +1,7 @@
 class Menu 
 {
   //Se declaran las variables para las imágenes y la fuente tipográfica
-  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA, upA, downA;
+  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA, rightAG, leftAG, upA, downA, upAG, downAG;
   PFont font;
   boolean credits = false, tutorial = false, controls = false, instructions = false, instructions2 = false, I1 = false, I2 = false;
   
@@ -19,6 +19,10 @@ class Menu
     leftA = loadImage("Assets/LeftArrow.png");
     upA = loadImage("Assets/UpArrow.png");
     downA = loadImage("Assets/DownArrow.png");
+    upAG = loadImage("Assets/UpArrowGrey.png");
+    downAG = loadImage("Assets/DownArrowGrey.png");
+    rightAG = loadImage("Assets/RightArrowGrey.png");
+    leftAG = loadImage("Assets/LeftArrowGrey.png");
     font = createFont("Assets/Fipps-Regular.otf", 32);
     textFont(font);
    }
@@ -143,7 +147,8 @@ class Menu
         image(ctrlV, 692.57, 322.07, 534.17, 276.77);
         textSize(24);
         text("1", 1173.72, 710); 
-        text("/2", 1193.98, 710); 
+        text("/2", 1193.98, 710);
+        image(leftAG, 1138.61, 676.06, 20.37, 33.94);
         image(rightA, 1250.85, 676.06, 20.37, 33.94);
         if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
         {
@@ -162,6 +167,7 @@ class Menu
         text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
         textSize(24);
         text("2/2", 1168.98, 710);
+        image(rightAG, 1250.85, 676.06, 20.37, 33.94);
         image(leftA, 1138.61, 676.06, 20.37, 33.94);
         if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
         {
@@ -186,6 +192,7 @@ class Menu
           text("Tendrás que obtener dos de los tres ítems antes de que se acabe", 84.86, 504.88);
           text("el tiempo o seas infectado por el covid si este te toca, si no llegas", 75.59, 554.88);  
           text("a la meta con por lo menos dos ítems no lograrás ganar.", 169.29, 604.88);
+          image(upAG, 623.01, 634.7, 33.94, 20.37);
           image(downA, 623.01, 674.7, 33.94, 20.37);   
           if(mouseX > 623.01 && mouseX < 656.95 && mouseY > 674.7 && mouseY < 695.07)
           {
@@ -203,6 +210,7 @@ class Menu
           text("relojes de arena para que el tiempo sea aumentado, pero tendrás", 97.31, 356.49);
           text("que ser rápido ya que, si el covid obtiene los relojes de arena", 127.42, 406.49);
           text("primero que tú, el tiempo se reducirá.", 338.29, 456.49);  
+          image(downAG, 623.01, 674.7, 33.94, 20.37); 
           image(upA, 623.01, 634.7, 33.94, 20.37);
           if(mouseX > 623.01 && mouseX < 656.95 && mouseY > 634.7 && mouseY < 655.07)
           {
