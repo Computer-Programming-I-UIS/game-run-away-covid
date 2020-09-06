@@ -1,9 +1,9 @@
 class Menu 
 {
   //Se declaran las variables para las imágenes y la fuente tipográfica
-  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA;
+  PImage logo, logo2, ESRB, back, close, ctrlH, ctrlV, rightA, leftA, upA, downA;
   PFont font;
-  boolean credits = false, tutorial = false, controls = false, instructions = false, instructions2 = false;
+  boolean credits = false, tutorial = false, controls = false, instructions = false, instructions2 = false, I1 = false, I2 = false;
   
   Menu() 
    {
@@ -17,6 +17,8 @@ class Menu
     ctrlV = loadImage("Assets/VirusCtrl.png");
     rightA = loadImage("Assets/RightArrow.png");
     leftA = loadImage("Assets/LeftArrow.png");
+    upA = loadImage("Assets/UpArrow.png");
+    downA = loadImage("Assets/DownArrow.png");
     font = createFont("Assets/Fipps-Regular.otf", 32);
     textFont(font);
    }
@@ -123,6 +125,8 @@ class Menu
           init = true;
           controls = false;
           instructions = false;
+          I1 = false;
+          I2 = false;
         }
       }
       if(controls)
@@ -139,7 +143,7 @@ class Menu
         image(ctrlV, 692.57, 322.07, 534.17, 276.77);
         textSize(24);
         text("1", 1173.72, 710); 
-        text("/3", 1193.98, 710); 
+        text("/2", 1193.98, 710); 
         image(rightA, 1250.85, 676.06, 20.37, 33.94);
         if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
         {
@@ -147,6 +151,7 @@ class Menu
           {
             controls = false;
             instructions = true;
+            I1 = true;
           }
         }
       }
@@ -156,40 +161,56 @@ class Menu
         textSize(48);
         text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
         textSize(24);
-        text("2/3", 1168.98, 710);
+        text("2/2", 1168.98, 710);
         image(leftA, 1138.61, 676.06, 20.37, 33.94);
-        image(rightA, 1250.85, 676.06, 20.37, 33.94);
         if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
         {
           if(mousePressed)
           {
             controls = true;
             instructions = false;
+            I1 = false;
+            I2 = false;
           }
         }
-        if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
+        if(I1)
         {
-          if(mousePressed)
+          textSize(20);
+          text("A lo largo del mapa estarán distribuidos varios", 246.54, 215.41);
+          text("ítems que te ayudarán a obtener puntos", 303.53, 265.41);  
+          image(img2, 570.7, 312.17, 47.79, 77.5);
+          image(img4, 654.13, 328.82, 76.22, 58.07);
+          textSize(12);
+          text("(ítems que dan puntos)", 534.25, 419.15);  
+          textSize(20);
+          text("Tendrás que obtener dos de los tres ítems antes de que se acabe", 84.86, 504.88);
+          text("el tiempo o seas infectado por el covid si este te toca, si no llegas", 75.59, 554.88);  
+          text("a la meta con por lo menos dos ítems no lograrás ganar.", 169.29, 604.88);
+          image(downA, 623.01, 674.7, 33.94, 20.37);   
+          if(mouseX > 623.01 && mouseX < 656.95 && mouseY > 674.7 && mouseY < 695.07)
           {
-            instructions = false;
-            instructions2 = true;
+            if(mousePressed)
+            {
+              I1 = false;
+              I2 = true;
+            }
           }
         }
-      }
-      if(instructions2)
-      {
-        fill(0);
-        textSize(48);
-        text("INSTRUCCIONES DE JUEGO", 159.61, 122.5);
-        textSize(24);
-        text("3/3", 1168.98, 710);
-        image(leftA, 1138.61, 676.06, 20.37, 33.94);
-        if(mouseX > 1138.61 && mouseX < 1158.98 && mouseY > 676.06 && mouseY < 710)
+        if(I2)
         {
-          if(mousePressed)
+          textSize(20);
+          text("Si el tiempo es tu problema y te quedas corto, podrás recoger los", 97.49, 306.49);
+          text("relojes de arena para que el tiempo sea aumentado, pero tendrás", 97.31, 356.49);
+          text("que ser rápido ya que, si el covid obtiene los relojes de arena", 127.42, 406.49);
+          text("primero que tú, el tiempo se reducirá.", 338.29, 456.49);  
+          image(upA, 623.01, 634.7, 33.94, 20.37);
+          if(mouseX > 623.01 && mouseX < 656.95 && mouseY > 634.7 && mouseY < 655.07)
           {
-            instructions = true;
-            instructions2 = false;
+            if(mousePressed)
+            {
+              I1 = true;
+              I2 = false;
+            }
           }
         }
       }
