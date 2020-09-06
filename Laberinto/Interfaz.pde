@@ -13,7 +13,6 @@ class Interfaz{
     textSize(10);
     noFill();rect(xpos,ypos,10,20);//personaje1
     noFill();rect(x2pos,y2pos,10,20);//personaje2
-    fill(0,255,0);rect(230,170,20,10);//meta
     fill(255,255,0);rect(10,150,20,10); fill(255,255,0);rect(60,60,10,20);//portal 1-2
     fill(54,118,57);rect(10,10,10,20); fill(54,118,57);rect(250,10,10,20);//portal 3-4
     fill(255,0,0);rect(30,60,10,20); fill(255,0,0);rect(220,280,10,20);//portal 5-6
@@ -34,6 +33,7 @@ class Interfaz{
     
     image(img, xpos, ypos, 10, 20);//Humano
     image(img1, x2pos, y2pos, 10, 20);//Covid
+    image(img5, 230, 170, 20, 10);//Meta
     
     //Entrada y salida de los personajes por los portales, en ambas direcciones
     
