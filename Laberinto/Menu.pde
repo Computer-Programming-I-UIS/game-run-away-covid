@@ -33,9 +33,10 @@ class Menu
     {
       //Se muestra la interfaz principal del menú
       image(logo, 51, 139, 722, 460);
+      fill(0);
       strokeWeight(20);
       textSize(32);
-      fill(255);
+      noFill();
       rect(880, 77.2, 322, 111);
       rect(880, 228.2, 322, 111);
       rect(880, 379.2, 322, 111);
@@ -52,8 +53,10 @@ class Menu
         rect(880, 77.2, 322, 111);
         if(mousePressed)
         {
+          sound.play();
           textSize(15);
           start = true;
+          puntaje = true;
           init = false;
         }
       }
@@ -64,6 +67,7 @@ class Menu
         rect(880, 228.2, 322, 111);
         if(mousePressed)
         {
+          sound.play();
           tutorial = true;
           controls = true;
           init = false;

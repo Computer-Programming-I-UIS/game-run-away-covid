@@ -2,10 +2,10 @@ import ddf.minim.*;
 Minim minim;
 AudioPlayer sound;
 //declaracion de variables globales y clases
-boolean start = false, init = true;
+boolean start = false, init = true, puntaje = false;
 int xpos=10,ypos=280,x2pos=280,y2pos=10,scl=10,n=0;
 int[][] maze= new int[30][31];
-PImage img2, img3, img4, img, img1, img5;
+PImage img2, img3, img4, img, img1, img5, back;
 int p1,p2,p3,p4,p5,p6,pj,pc, pmin = 200;
 int x1,x2,x3,x4,x5,y1,y2,y3,y4,y5;
 Menu A;
@@ -16,6 +16,8 @@ Interfaz D;
     void setup(){ //Se definen los objetos y se da valor inicial a las variables
   
     size(1280, 720);
+    minim = new Minim(this);
+    sound = minim.loadFile("SupButtonSound.mp3");
     A = new Menu();
     B = new Puntaje();
     C = new Tiempo();
@@ -27,9 +29,8 @@ Interfaz D;
     img3 = loadImage("Assets/HourGlassPixel.png");
     img4 = loadImage("Assets/MaskPixel.png");
     img5 = loadImage("Assets/meta.jpg");
+    back = loadImage("Assets/Back.png");
     textSize(25);
-    minim = new Minim(this);
-    sound = minim.loadFile("SupButtonSound.mp3");
     textSize(32);
     }
 
@@ -39,14 +40,16 @@ Interfaz D;
   A.Mainmenu();
   scale(2.2);
   translate(150,0);
-    
-  if(start) {
-      
+  if(puntaje)
+  {
+    B.puntaje();
+  }
+  if(start) 
+  {
     D.Matriz();
     D.update();
     D.show();
     C.tiempo();
-    B.puntaje();
     }  
     fill(255,0,0);
     }

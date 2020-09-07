@@ -1,7 +1,6 @@
 class Puntaje{
   
   void puntaje() {
-    
   fill(0);text("PUNTAJE "+pj, -115, 270);
   fill(0);text("PUNTAJE "+pc, 315, 270);
   pj = p1+p2+p3; //Puntos jugador del humano
@@ -18,13 +17,20 @@ class Puntaje{
   if ((x2pos>139&&x2pos<160)&&(y2pos>259&&y2pos<280)){p6=100;x5=350; y5=290; }
   
   //Si el covid toca al humano el juego se acaba, ganando asi el covid
-  if ((x2pos==xpos)&&(y2pos>ypos-20&&y2pos<ypos+20)){
-    
+  if ((x2pos==xpos)&&(y2pos>ypos-20&&y2pos<ypos+20))
+  {
+    start = false;
     background(255);
     pc = pmin;
-    text("EL COVID TE HA MATADO",50, 150);
-    text("PERDISTE",100, 170);
+    text("EL COVID TE HA INFECTADO",40, 150);
+    text("!PERDISTE¡",100, 170);
+    text("PRESIONA R PARA VOLVERLO A INTENTAR", -20, 300);
+    if(key == 'r' || key == 'R')
+    {
+      //init = true;
+      start = true;
     }
+  }
     
   //Para que el humano gane debe llegar a la meta con 200 puntos, es decir debe coger los items
   if(((xpos>229&&xpos<250)&&(ypos>159&&ypos<180))&&(pj>=pmin)){
