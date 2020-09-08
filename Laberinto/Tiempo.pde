@@ -13,14 +13,12 @@ class Tiempo {
   
   else if(s==0) {
     
-   //background(0);
-   //fill(255);
-   //clear();
+   
    x1=30; x2=120; x3=65; x4=260; x5=145; y1=192; y2=52; y3=272; y4=252; y5=272;
    xpos=10;ypos=280;x2pos=280;y2pos=10;
    start = false;
    resetnotime = true;
-   //noLoop();
+ 
    }//Cuando el tiempo llegue a 0 se acaba el juego y el jugador 1 pierde
     
    if ((xpos>119&&xpos<130)&&(ypos>49&&ypos<70)&&(x2==120&&y2==52)){ s= 6000 ; x2=-100; y2=290; }

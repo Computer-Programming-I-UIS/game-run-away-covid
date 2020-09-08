@@ -13,6 +13,7 @@ class Condiciones
       text("PRESIONA 'X' PARA VOLVER AL MENÚ", 361.35, 541.96);
       if(key == 'r' || key == 'R')
       {
+    
         resetdead = false;
         start = true;
         p1 = 0;
@@ -41,6 +42,7 @@ class Condiciones
       text("PRESIONA 'X' PARA VOLVER AL MENÚ", 361.35, 541.96);
       if(key == 'r' || key == 'R')
       {
+   
         resetwin = false;
         start = true;
         p1 = 0;
@@ -71,6 +73,7 @@ class Condiciones
       text("PRESIONA 'X' PARA VOLVER AL MENÚ", 361.35, 541.96);
       if(key == 'r' || key == 'R')
       {
+     
         resetnotime = false;
         start = true;
         p1 = 0;

@@ -39,13 +39,12 @@ class Puntaje{
     if ((x2pos==xpos)&&(y2pos>ypos-20&&y2pos<ypos+20))
     {
       x1=30; x2=120; x3=65; x4=260; x5=145; y1=192; y2=52; y3=272; y4=252; y5=272;
-      //pj = 0;
-      //pc = 0;
+     
       start = false;
       resetdead = true;
       xpos=10;ypos=280;x2pos=280;y2pos=10;
       background(255);
-      //pc = pmin;
+    
     }
   //Para que el humano gane debe llegar a la meta con 200 puntos, es decir debe coger los items
   if(((xpos>229&&xpos<250)&&(ypos>159&&ypos<180))&&(pj>=pmin))
@@ -54,9 +53,7 @@ class Puntaje{
     resetwin = true;
     start = false;
     xpos=10;ypos=280;x2pos=280;y2pos=10;
-    //background(255);
-    //text("EL HUMANO HA GANADO",65, 160);
-    //noLoop();
+   
     }
   }  
 }

@@ -10,7 +10,7 @@ class Interfaz{
   
   void show(){
     
-    textSize(10);
+    textSize(10);stroke(255);
     noFill();rect(xpos,ypos,10,20);//personaje1
     noFill();rect(x2pos,y2pos,10,20);//personaje2
     fill(255,255,0);rect(10,150,20,10); fill(255,255,0);rect(60,60,10,20);//portal 1-2
@@ -99,7 +99,7 @@ class Interfaz{
     for (int j=0; j<=30; j++){
       if(maze[i][j]==1){
         fill(0);
-        strokeWeight(0);
+        stroke(0);strokeWeight(0);
         rect((i)*10,j*10,10,10);
         }
       }
