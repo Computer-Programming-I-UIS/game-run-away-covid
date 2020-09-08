@@ -49,6 +49,8 @@ class Menu
       if(mouseX > 880 && mouseX < 1202 && mouseY > 77.2 && mouseY < 188.2)
       {
         //Características del botón "comenzar"
+        x1=30; x2=120; x3=65; x4=260; x5=145; y1=192; y2=52; y3=272; y4=252; y5=272;
+        xpos=10;ypos=280;x2pos=280;y2pos=10;
         fill(0, 120);
         rect(880, 77.2, 322, 111);
         if(mousePressed)
@@ -56,8 +58,16 @@ class Menu
           sound.play();
           textSize(15);
           start = true;
-          puntaje = true;
           init = false;
+          resetwin = false;
+          resetdead = false;
+          p1 = 0;
+          p2 = 0;
+          p3 = 0;
+          p4 = 0;
+          p5 = 0;
+          p6 = 0;
+          s = 6000;
         }
       }
       if(mouseX > 880 && mouseX < 1202 && mouseY > 228.2 && mouseY < 339.2)
