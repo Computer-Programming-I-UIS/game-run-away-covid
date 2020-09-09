@@ -99,7 +99,7 @@ class Interfaz{
     for (int j=0; j<=30; j++){
       if(maze[i][j]==1){
         fill(0);
-        stroke(0);strokeWeight(0);
+        strokeWeight(0);
         rect((i)*10,j*10,10,10);
         }
       }
