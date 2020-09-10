@@ -8,7 +8,7 @@ Andrés David Baena Atencio (2190422)
 
 ## Descripción
 
-Este es un juego de laberintos en el cual tendrás que escapar del COVID, pero antes tendrás que obtener los puntos que están a través del mapa.
+Este es un juego de laberintos de dos jugadores, en el cual tendras que escoger si ser humano o virus, en donde el humano tiene como objetivo escapar del COVID. A lo largo del mapa estarán distribuidos varios ítems que le ayudarán a obtener puntos, los cuales tendrá que obtener dos de estos antes de que se acabe el tiempo o sea infectado por el virus si este lo toca.
 
 ## Capturas de prueba
 
