@@ -55,7 +55,7 @@ class Menu
         rect(880, 77.2, 322, 111);
         if(mousePressed)
         {
-          sound.play();
+          //sound.play();
           textSize(15);
           start = true;
           init = false;
@@ -77,7 +77,7 @@ class Menu
         rect(880, 228.2, 322, 111);
         if(mousePressed)
         {
-          sound.play();
+          //sound.play();
           tutorial = true;
           controls = true;
           init = false;
@@ -90,6 +90,7 @@ class Menu
         rect(880, 379.2, 322, 111);
         if(mousePressed)
         {
+          //sound.play();
           credits = true;
           init = false;
         }
@@ -101,6 +102,7 @@ class Menu
         rect(880, 530.2, 322, 111);
         if(mousePressed)
         {
+          //sound.play();
           exit();
         }
       }
