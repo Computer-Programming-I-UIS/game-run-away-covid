@@ -42,6 +42,7 @@ Movimiento F;
   void draw(){ //Se llaman a las funciones de las clases
   
   background(255);
+  stroke(0);
   A.Mainmenu();
   if(resetdead)
   {
