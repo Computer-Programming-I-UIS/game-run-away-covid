@@ -53,3 +53,5 @@ Este es un juego de laberintos de dos jugadores, en el cual tendras que escoger 
 *Relojes de arena para aumentar o disminuir el tiempo.
 
 *Tutorial y guia basica del juego.
+
+*Para jugar se pulsan las teclas, NO se mantienen presionadas.
