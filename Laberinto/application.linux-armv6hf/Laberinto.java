@@ -474,7 +474,8 @@ class Menu
         text("/2", 1193.98f, 710);
         image(leftAG, 1138.61f, 676.06f, 20.37f, 33.94f);
         image(rightA, 1250.85f, 676.06f, 20.37f, 33.94f);
-        text("*NO MANTENGA PRESIONADAS LAS TECLAS AL JUGAR*", 120, 700.06f);
+        textSize(15);
+        text("*NO MANTENER PRESIONADAS LAS TECLAS DE MOVIMIENTO AL JUGAR*", 240, 700.06f);
         if(mouseX > 1250.85f  && mouseX < 1271.22f && mouseY > 676.06f && mouseY < 710)
         {
           if(mousePressed)

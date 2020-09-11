@@ -46,12 +46,16 @@ Este es un juego de laberintos de dos jugadores, en el cual tendras que escoger 
 
 ## Características
 
-*Items que dan puntos al ser "atrapados".
+- Juego apto para todo público.
 
-*Portales que transportaran a los jugadores a través del mapa.
+- Juego de laberintos y portales.
 
-*Relojes de arena para aumentar o disminuir el tiempo.
+- Disponible en sistemas operativos Windows y Linux.
 
-*Tutorial y guia basica del juego.
+- Controles comodos y sencillos.
 
-*Para jugar se pulsan las teclas, NO se mantienen presionadas.
+- Interfaces sencillas y de fácil navegación.
+
+- Items que ayudan a los jugadores.
+
+- Portales que transportaran a los jugadores a través del mapa.

@@ -166,7 +166,8 @@ class Menu
         text("/2", 1193.98, 710);
         image(leftAG, 1138.61, 676.06, 20.37, 33.94);
         image(rightA, 1250.85, 676.06, 20.37, 33.94);
-        text("*NO MANTENGA PRESIONADAS LAS TECLAS AL JUGAR*", 120, 700.06);
+        textSize(15);
+        text("*NO MANTENER PRESIONADAS LAS TECLAS DE MOVIMIENTO AL JUGAR*", 240, 700.06);
         if(mouseX > 1250.85  && mouseX < 1271.22 && mouseY > 676.06 && mouseY < 710)
         {
           if(mousePressed)
