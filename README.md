@@ -40,6 +40,10 @@ Este es un juego de laberintos de dos jugadores, en el cual tendras que escoger 
 
 - Pantalla mostrada cuando el humano gana
 
+![IMG8](https://2h0ibq.bn.files.1drv.com/y4miNBLuwWsS8Mmk38jfbnEGGDsL1P1Y1xy3t97douuVn_NhwuRPR8LgX754V6uTQqernyS7SgO4y441ElOL0F_s3d2UMaEpBu9K3pD4O-VxGKqoG_sTaEdU0nkFXfcUsv7nBCo3vYQ_4SCB1-AuFuBsd_32kiuk3tJhZre_3HRMyIf0ztI3LYnMykrJa0EBLqs1EESWOi3vpdqEIo-kCHB6g?width=1100&height=624&cropmode=none)
+
+- Modelos de los personajes
+
 ## Características
 
 *Items que dan puntos al ser "atrapados".
